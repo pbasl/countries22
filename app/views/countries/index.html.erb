@@ -1,0 +1,19 @@
+<h1>Searching for - <%= @search_term %></h1>
+<table border="1">
+  <tr>
+    <th>Flag</th>
+    <th>Name</th>
+    <th>Region</th>
+    <th>Area</th>
+    <th>Population</th>
+  </tr>
+  <% @countries.each do |country| %>
+    <tr class="<%= cycle('even', 'odd') %>">
+      <td><%= country['flag'] %></td>
+      <td><%= country['name']['common'] %></td>
+      <td><%= country['region'] %></td>
+      <td><%= country['area'] %></td>
+      <td><%= country['population'] %></td>
+    </tr>
+  <% end %>
+</table>
