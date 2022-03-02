@@ -12,4 +12,8 @@ class Country
     get("/name/#{name}")
   end
 
+  def self.search_one(name)
+    get("/name/#{name}?fullText=true")
+  end
+
 end
